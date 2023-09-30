@@ -2,8 +2,12 @@ name: 🐧 Versioning Control
 run-name: ${{ github.actor }} is running the tests and lint on GitHub Actions 🐧
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches: [main]
+    types: [opened, synchronize, reopened]
 
 jobs:
   ci:
