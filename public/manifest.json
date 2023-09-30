@@ -1,0 +1,21 @@
+{
+  "name": "Daniel Silva • Sênior Front-End Developer",
+  "short_name": "Desenvolver se tornou um hobby favorito!",
+  "description": "Desenvolver se tornou um hobby favorito!",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "background_color": "#040506",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#234B7A"
+}
