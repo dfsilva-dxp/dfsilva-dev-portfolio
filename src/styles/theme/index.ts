@@ -2,11 +2,14 @@
 
 const defaultTheme = {
   grid: {
-    container: '130rem',
-    gutter: '3.2rem'
+    sm: '54rem',
+    md: '72rem',
+    lg: '96rem',
+    xlg: '114rem',
+    xxlg: '132rem'
   },
   border: {
-    radius: '0.4rem'
+    radius: '0.8rem'
   },
   font: {
     family:
