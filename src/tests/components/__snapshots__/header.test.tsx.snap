@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render currectly header 1`] = `
+.c1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.c0 {
+  width: 100vw;
+  padding: 2rem 6rem;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+<header
+  class="c0"
+>
+  <div
+    class="c1"
+    content="stretch"
+    direction="row"
+    display="flex"
+    wrap="wrap"
+  >
+    <img
+      alt="Logotipo Daniel Silva • Sênior Front-End Developer"
+      aria-label="Logotipo dfsilva"
+      data-nimg="1"
+      decoding="async"
+      fetchpriority="high"
+      height="36"
+      src="/images/logo.svg"
+      style="color: transparent;"
+      title="Logotipo Daniel Silva • Sênior Front-End Developer"
+      width="36"
+    />
+  </div>
+</header>
+`;
