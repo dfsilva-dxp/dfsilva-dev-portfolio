@@ -36,9 +36,10 @@ const containerVars = {
   open: {
     opacity: 1,
     transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.9,
-      staggerDirection: 1
+      ease: [0.12, 0, 0.39, 0],
+      duration: 0.5,
+      staggerDirection: -1,
+      delay: 0.5
     }
   }
 };
