@@ -1,7 +1,7 @@
 export const hero = {
   animate: {
     transition: {
-      delayChildren: 0.8,
+      delayChildren: 1,
       staggerChildren: 0.2
     }
   }

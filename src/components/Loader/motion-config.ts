@@ -1,7 +1,8 @@
 export const container = {
   show: {
     transition: {
-      staggerChildren: 0.15
+      staggerChildren: 0.15,
+      delayChildren: 0.5
     }
   }
 };
