@@ -29,6 +29,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <link rel="manifest" href="/manifest.json" />
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://dfsilva.dev" />
@@ -40,12 +41,12 @@ export default function RootLayout({
 
         <link
           rel="shortcut icon"
-          href="/img/icon/icon-512.png"
+          href="/icon/icon-512.png"
           type="image/x-icon"
         />
         <link
           rel="apple-touch-icon"
-          href="/img/icon/icon-512.png"
+          href="/icon/icon-512.png"
           type="image/x-icon"
         />
       </Head>
