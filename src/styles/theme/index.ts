@@ -33,7 +33,7 @@ const defaultTheme = {
   colors: {
     white: '#FFF',
     primary: {
-      main: '#234B7A',
+      main: '#545CBF',
       dark: '#040506'
     },
     purple: {
@@ -57,8 +57,8 @@ const defaultTheme = {
   },
   layers: {
     base: 10,
-    menu: 20,
-    overlay: 30,
+    menu: 30,
+    overlay: 20,
     modal: 40,
     alwaysOnTop: 50
   },
