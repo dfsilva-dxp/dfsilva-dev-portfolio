@@ -6,7 +6,7 @@ export const LoaderContent = styled.main`
   ${({ theme }) => css`
     width: 100vw;
     height: 100vh;
-    background: ${theme.colors.primary.dark} url(/images/svg/bg-mobile.svg)
+    background: ${theme.colors.primary.dark} url(/images/png/background-md.png)
       right top/contain no-repeat fixed;
 
     & > div {
@@ -16,8 +16,8 @@ export const LoaderContent = styled.main`
     }
 
     @media (min-width: 1200px) {
-      background: ${theme.colors.primary.dark} url(/images/svg/bg-desktop.svg)
-        right top/contain no-repeat fixed;
+      background: ${theme.colors.primary.dark}
+        url(/images/png/background-lg.png) right top/contain no-repeat fixed;
     }
   `}
 `;
