@@ -26,9 +26,8 @@ const Loader = ({ setLoading }: ILoaderProps) => {
           <motion.div variants={item}>
             <Image
               src="/images/svg/line-code.svg"
-              alt="Logotipo Daniel Silva • Sênior Front-End Developer"
-              title="Logotipo Daniel Silva • Sênior Front-End Developer"
-              aria-label="Logotipo dfsilva"
+              alt="Console.log Hello World!"
+              title="Console.log Hello World!"
               width={259.18}
               height={31}
               priority

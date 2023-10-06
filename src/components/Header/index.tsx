@@ -53,42 +53,10 @@ const Header = () => {
                 exit="initial"
                 className="motion-container"
               >
-                <Flex align="center">
-                  <S.MobileLinks>
-                    <Flex direction="column" gap="3.8rem">
-                      <strong className="title">Menu</strong>
-
-                      <Flex direction="column">
-                        <S.LinkItem>
-                          <Flex align="center" gap="1.6rem">
-                            <span className="line-number">00</span>
-                            <span className="label">Home</span>
-                          </Flex>
-                        </S.LinkItem>
-
-                        <S.LinkItem>
-                          <Flex align="center" gap="1.6rem">
-                            <span className="line-number">01</span>
-                            <span className="label">Portfólio</span>
-                          </Flex>
-                        </S.LinkItem>
-
-                        <S.LinkItem>
-                          <Flex align="center" gap="1.6rem">
-                            <span className="line-number">02</span>
-                            <span className="label">Conhecimentos</span>
-                          </Flex>
-                        </S.LinkItem>
-
-                        <S.LinkItem>
-                          <Flex align="center" gap="1.6rem">
-                            <span className="line-number">03</span>
-                            <span className="label">Vamos Conversar?</span>
-                          </Flex>
-                        </S.LinkItem>
-                      </Flex>
-                    </Flex>
-                  </S.MobileLinks>
+                <Flex align="center" justify="center">
+                  <Flex direction="column" gap="1.6rem">
+                    <strong>Menu</strong>
+                  </Flex>
                 </Flex>
               </motion.div>
             </Container>
