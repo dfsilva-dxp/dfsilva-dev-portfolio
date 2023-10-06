@@ -4,9 +4,37 @@ import styled, { css } from 'styled-components';
 
 import { Container } from '@/components';
 
+export const SocialMediaContent = styled.span`
+  ${({ theme }) => css`
+    display: none;
+    position: absolute;
+    right: 6rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    p {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-weight: ${theme.font.weight.semibold};
+    }
+
+    & a {
+      transition: color 0.15s ease-out;
+
+      &:hover {
+        color: ${theme.colors.green.main};
+      }
+    }
+
+    @media (min-width: 768px) {
+      display: initial;
+    }
+  `}
+`;
+
 export const HeroContent = styled.section`
   ${({ theme }) => css`
-    background: ${theme.colors.primary.dark} url(/images/svg/bg-mobile.svg)
+    background: ${theme.colors.primary.dark} url(/images/png/background-md.png)
       right top/contain no-repeat fixed;
     width: 100vw;
     height: 100vh;
@@ -20,8 +48,8 @@ export const HeroContent = styled.section`
     }
 
     @media (min-width: 1200px) {
-      background: ${theme.colors.primary.dark} url(/images/svg/bg-desktop.svg)
-        right top/contain no-repeat fixed;
+      background: ${theme.colors.primary.dark}
+        url(/images/png/background-lg.png) right top/contain no-repeat fixed;
     }
   `}
 `;

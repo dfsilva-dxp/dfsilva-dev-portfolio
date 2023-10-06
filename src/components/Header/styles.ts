@@ -8,8 +8,8 @@ import { Container } from '..';
 export const HeaderContent = styled.header`
   ${({ theme }) => css`
     width: 100vw;
+    mix-blend-mode: difference;
     padding: 2rem 1.6rem;
-    background: transparent;
     position: fixed;
     top: 0;
     z-index: ${theme.layers.menu};
@@ -25,11 +25,10 @@ export const ToggleButton = styled.button`
     background: none;
     border: none;
     box-shadow: none;
-    font-size: ${theme.font.sizes.small};
     color: ${theme.colors.white};
+    font-size: ${theme.font.sizes.small};
     text-transform: uppercase;
     font-weight: ${theme.font.weight.bold};
-    mix-blend-mode: exclusion;
     transition: all 0.3s ease-in-out;
   `}
 `;
