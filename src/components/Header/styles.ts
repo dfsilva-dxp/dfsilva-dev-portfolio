@@ -8,7 +8,6 @@ import { Container } from '..';
 export const HeaderContent = styled.header`
   ${({ theme }) => css`
     width: 100vw;
-    mix-blend-mode: difference;
     padding: 2rem 1.6rem;
     position: fixed;
     top: 0;
@@ -25,7 +24,7 @@ export const ToggleButton = styled.button`
     background: none;
     border: none;
     box-shadow: none;
-    color: ${theme.colors.white};
+    color: ${theme.colors.gray[200]};
     font-size: ${theme.font.sizes.small};
     text-transform: uppercase;
     font-weight: ${theme.font.weight.bold};
@@ -35,55 +34,15 @@ export const ToggleButton = styled.button`
 
 export const Overlay = styled(motion.div)`
   ${({ theme }) => css`
+    width: 100vw;
     color: ${theme.colors.white};
     position: fixed;
     inset: 0;
-    background: ${theme.colors.primary.dark};
+    background: ${theme.colors.primary.main};
     z-index: ${theme.layers.overlay};
 
     & ${Container} > .motion-container > div {
       height: 100vh;
-    }
-  `}
-`;
-
-export const MobileLinks = styled.nav`
-  ${({ theme }) => css`
-    font-size: 1.8rem;
-    font-weight: ${theme.font.weight.bold};
-    display: block;
-
-    .title {
-      font-size: 13rem;
-      text-transform: uppercase;
-      color: ${theme.colors.gray[700]};
-    }
-
-    @media (min-width: 768px) {
-      display: none;
-    }
-  `}
-`;
-
-export const LinkItem = styled.span`
-  ${({ theme }) => css`
-    padding: 0.5rem 0;
-    transition: color 0.15s ease-in;
-
-    .line-number {
-      color: ${theme.colors.gray[700]};
-    }
-
-    .label {
-      color: ${theme.colors.gray[400]};
-    }
-
-    &:hover .label {
-      color: ${theme.colors.white};
-    }
-
-    &:hover .line-number {
-      color: ${theme.colors.primary.main};
     }
   `}
 `;
