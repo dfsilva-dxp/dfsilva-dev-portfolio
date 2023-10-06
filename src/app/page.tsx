@@ -16,10 +16,10 @@ export default function Home() {
             <Loader setLoading={setLoading} />
           </motion.div>
         ) : (
-          <>
+          <main>
             <Header />
             <Hero />
-          </>
+          </main>
         )}
       </AnimatePresence>
     </LayoutGroup>
