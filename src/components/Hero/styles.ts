@@ -34,8 +34,8 @@ export const SocialMediaContent = styled.span`
 
 export const HeroContent = styled.section`
   ${({ theme }) => css`
-    background: ${theme.colors.primary.dark} url(/images/png/background-md.png)
-      right top/contain no-repeat fixed;
+    background: ${theme.colors.primary.dark}
+      url(/images/webp/background-md.webp) right top/contain no-repeat fixed;
     width: 100vw;
     height: 100vh;
     color: ${theme.colors.white};
@@ -49,7 +49,7 @@ export const HeroContent = styled.section`
 
     @media (min-width: 1200px) {
       background: ${theme.colors.primary.dark}
-        url(/images/png/background-lg.png) right top/contain no-repeat fixed;
+        url(/images/webp/background-lg.webp) right top/contain no-repeat fixed;
     }
   `}
 `;
