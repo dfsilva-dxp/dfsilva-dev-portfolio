@@ -1,8 +1,8 @@
 import { Dispatch, SetStateAction } from 'react';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-import { Flex } from '..';
+import { CodeLine, Flex } from '@/components';
+import HelloWorld from '@/components/HelloWorld';
 
 import * as S from './styles';
 
@@ -24,14 +24,9 @@ const Loader = ({ setLoading }: ILoaderProps) => {
           onAnimationComplete={() => setLoading(false)}
         >
           <motion.div variants={item}>
-            <Image
-              src="/images/svg/line-code.svg"
-              alt="Console.log Hello World!"
-              title="Console.log Hello World!"
-              width={259.18}
-              height={31}
-              priority
-            />
+            <CodeLine lineNumber="01">
+              <HelloWorld />
+            </CodeLine>
           </motion.div>
         </motion.div>
       </Flex>
