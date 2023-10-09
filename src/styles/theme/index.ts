@@ -37,7 +37,10 @@ const defaultTheme = {
       dark: '#040506'
     },
     purple: {
-      main: '#3A3051'
+      main: '#3A3051',
+      500: '#AE95EF',
+      700: '#CD62C5',
+      800: '#3A3051'
     },
     gray: {
       50: '#FAFAFA',
@@ -53,6 +56,15 @@ const defaultTheme = {
     },
     red: {
       main: '#FF6347'
+    },
+    yellow: {
+      main: '#E1DB74'
+    },
+    orange: {
+      main: '#DD7D3B'
+    },
+    blue: {
+      main: '#2B8AEF'
     }
   },
   layers: {
