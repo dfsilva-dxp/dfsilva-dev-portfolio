@@ -32,6 +32,9 @@ const defaultTheme = {
   },
   colors: {
     white: '#FFF',
+    text: {
+      main: '#1d1f21'
+    },
     primary: {
       main: '#545CBF',
       dark: '#040506'
@@ -43,7 +46,7 @@ const defaultTheme = {
       800: '#3A3051'
     },
     gray: {
-      50: '#FAFAFA',
+      50: '#f8f8f8',
       100: '#F2F3F5',
       200: '#C7CFD9',
       300: '#AFBFD6',

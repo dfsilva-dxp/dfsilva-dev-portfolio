@@ -1,8 +1,7 @@
 import { Dispatch, SetStateAction } from 'react';
 import { motion } from 'framer-motion';
 
-import { CodeLine, Flex } from '@/components';
-import HelloWorld from '@/components/HelloWorld';
+import { CodeLine, Flex, HelloWorld } from '@/components';
 
 import * as S from './styles';
 
