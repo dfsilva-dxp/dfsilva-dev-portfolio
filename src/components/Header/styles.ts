@@ -24,7 +24,6 @@ export const ToggleButton = styled.button`
     background: none;
     border: none;
     box-shadow: none;
-    color: ${theme.colors.gray[200]};
     font-size: ${theme.font.sizes.small};
     text-transform: uppercase;
     font-weight: ${theme.font.weight.bold};
@@ -38,7 +37,7 @@ export const Overlay = styled(motion.div)`
     color: ${theme.colors.white};
     position: fixed;
     inset: 0;
-    background: ${theme.colors.primary.main};
+    background: ${theme.colors.white};
     z-index: ${theme.layers.overlay};
 
     & ${Container} > .motion-container > div {

@@ -34,11 +34,10 @@ export const SocialMediaContent = styled.span`
 
 export const HeroContent = styled.section`
   ${({ theme }) => css`
-    background: ${theme.colors.primary.dark}
-      url(/images/webp/background-md.webp) right top/contain no-repeat fixed;
+    background: ${theme.colors.gray[50]} url(/images/webp/background-md.webp)
+      right top/contain no-repeat fixed;
     width: 100vw;
     height: 100vh;
-    color: ${theme.colors.white};
     position: relative;
 
     ${Container} .motion-container > div {
@@ -48,8 +47,8 @@ export const HeroContent = styled.section`
     }
 
     @media (min-width: 1200px) {
-      background: ${theme.colors.primary.dark}
-        url(/images/webp/background-lg.webp) right top/contain no-repeat fixed;
+      background: ${theme.colors.gray[50]} url(/images/webp/background-lg.webp)
+        right top/contain no-repeat fixed;
     }
   `}
 `;
@@ -77,7 +76,8 @@ export const HeroInfo = styled.h1`
 
 export const BottomTitle = styled.h1`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.small};
+    font-size: ${theme.font.sizes.medium};
+    text-transform: uppercase;
   `}
 `;
 

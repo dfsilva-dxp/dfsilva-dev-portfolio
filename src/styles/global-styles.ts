@@ -23,7 +23,7 @@ const GlobalStyles = createGlobalStyle`
   }
   html, body, #__next {
     background: ${theme.colors.white};
-    color: ${theme.colors.primary.dark};
+    color: ${theme.colors.text.main};
     height: 100%;
   }
   body {

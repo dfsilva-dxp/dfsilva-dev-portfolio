@@ -17,6 +17,7 @@ export const item = {
     y: 0,
     transition: {
       ease: [0.2, 0.01, 0.05, 1.6],
+
       duration: 1.6
     }
   },
