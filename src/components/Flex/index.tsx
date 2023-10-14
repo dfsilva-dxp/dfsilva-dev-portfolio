@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { HTMLProps, ReactNode } from 'react';
 import { StyleSheetManager } from 'styled-components';
 import isValidProp from '@emotion/is-prop-valid';
 
@@ -41,9 +41,12 @@ export type FlexType = {
     | '6rem';
 };
 
-interface IFlexProps extends FlexType {
+type FlexDivType = HTMLProps<HTMLDivElement>;
+
+type IFlexProps = {
   children: ReactNode;
-}
+} & FlexType &
+  FlexDivType;
 
 const Flex = ({
   children,
@@ -53,7 +56,8 @@ const Flex = ({
   justify = 'flex-start',
   content = 'stretch',
   wrap = 'wrap',
-  gap = '0'
+  gap = '0',
+  ...props
 }: IFlexProps) => {
   return (
     <StyleSheetManager shouldForwardProp={(propName) => isValidProp(propName)}>
@@ -65,6 +69,7 @@ const Flex = ({
         content={content}
         wrap={wrap}
         gap={gap}
+        {...props}
       >
         {children}
       </S.FlexContent>

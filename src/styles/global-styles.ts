@@ -36,7 +36,8 @@ const GlobalStyles = createGlobalStyle`
   h4,
   h5,
   h6 {
-    font-weight: 700;
+    font-weight: 300;
+    color: ${theme.colors.text.heading};
   }
   ol,
   ul {
@@ -47,7 +48,7 @@ const GlobalStyles = createGlobalStyle`
   textarea,
   select,
   button {
-    font: ${theme.font.weight.medium} ${theme.font.sizes.medium} ${theme.font.family}, sans-serif;
+    font: ${theme.font.weight.regular} ${theme.font.sizes.large} ${theme.font.family}, sans-serif;
   }
   span {
     display: inline-block;

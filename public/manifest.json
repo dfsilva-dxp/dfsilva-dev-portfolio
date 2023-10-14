@@ -4,18 +4,18 @@
   "description": "Desenvolver se tornou um hobby favorito!",
   "icons": [
     {
-      "src": "./icon-192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
     },
     {
-      "src": "./icon-512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
   "background_color": "#040506",
   "display": "fullscreen",
   "start_url": "/",
-  "theme_color": "#234B7A"
+  "theme_color": "#7A4FEE"
 }

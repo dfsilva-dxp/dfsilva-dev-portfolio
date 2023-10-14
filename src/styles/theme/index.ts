@@ -24,19 +24,20 @@ const defaultTheme = {
       xsmall: '1.2rem',
       small: '1.4rem',
       medium: '1.6rem',
-      large: '2.4rem',
-      xlarge: '3.6rem',
-      xxlarge: '6rem',
-      huge: '22rem'
+      large: '1.8rem',
+      xlarge: '2.4rem',
+      xxlarge: '4.8rem',
+      huge: '9rem'
     }
   },
   colors: {
     white: '#FFF',
     text: {
-      main: '#1d1f21'
+      heading: '#1C1B20',
+      main: '#606060'
     },
     primary: {
-      main: '#545CBF',
+      main: '#7A4FEE',
       dark: '#040506'
     },
     purple: {
@@ -46,28 +47,17 @@ const defaultTheme = {
       800: '#3A3051'
     },
     gray: {
-      50: '#f8f8f8',
-      100: '#F2F3F5',
+      50: '#F5F5F5',
       200: '#C7CFD9',
-      300: '#AFBFD6',
-      400: '#8D95AF',
-      700: '#212A36',
-      800: '#0E1116'
+      700: '#383838'
     },
     green: {
       main: '#43F0C7'
     },
-    red: {
-      main: '#FF6347'
-    },
-    yellow: {
-      main: '#E1DB74'
-    },
-    orange: {
-      main: '#DD7D3B'
-    },
-    blue: {
-      main: '#2B8AEF'
+    gradient: {
+      base: 'rgb(207,235,255)',
+      linear:
+        'linear-gradient(90deg, rgba(207,235,255,1) 5%, rgba(255,153,189,1) 30%, rgba(151,71,255,1) 100%);'
     }
   },
   layers: {
