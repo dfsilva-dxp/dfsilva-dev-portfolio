@@ -1,7 +1,6 @@
 'use client';
 
-import { Flex } from '@/components';
-import Image from 'next/image';
+import { Flex, SplitElement } from '@/components';
 
 export default function Home() {
   return (
@@ -15,18 +14,7 @@ export default function Home() {
       }}
     >
       <Flex align="center" justify="center" gap="1rem">
-        <Image
-          src="images/svg/logo.svg"
-          alt="Next.js Logo"
-          width={36}
-          height={36}
-          priority
-        />
-
-        <Flex direction="column">
-          <strong>Daniel Silva</strong>
-          <strong>Sênior Frontend Developer</strong>
-        </Flex>
+        <SplitElement firstChild="firstChild" lastChild="lastChild" />
       </Flex>
     </Flex>
   );
