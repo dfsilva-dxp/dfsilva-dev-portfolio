@@ -1,2 +1,3 @@
-export { default as Flex } from './Flex';
-export { default as SplitElement } from './SplitElement';
+export { default as Box } from './Box';
+export { FlexComponent as Flex } from './Flex';
+export { default as Split } from './Split';
