@@ -1,7 +1,8 @@
 'use client';
 
-import { Flex } from '@/components';
-import Image from 'next/image';
+import { MapPinLine } from 'phosphor-react';
+
+import { Flex, Box } from '@/components';
 
 export default function Home() {
   return (
@@ -14,19 +15,22 @@ export default function Home() {
         height: '100vh'
       }}
     >
-      <Flex align="center" justify="center" gap="1rem">
-        <Image
-          src="images/svg/logo.svg"
-          alt="Next.js Logo"
-          width={36}
-          height={36}
-          priority
+      <Flex
+        align="center"
+        justify="center"
+        gap="1rem"
+        direction="column"
+        style={{
+          width: '100%',
+          maxWidth: '800px',
+          margin: '0 auto'
+        }}
+      >
+        <Box
+          firstChild="Localidade"
+          lastChild="São Paulo, SP - BR"
+          icon={<MapPinLine size={20} weight="bold" />}
         />
-
-        <Flex direction="column">
-          <strong>Daniel Silva</strong>
-          <strong>Sênior Frontend Developer</strong>
-        </Flex>
       </Flex>
     </Flex>
   );
