@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const SplitWrapper = styled.div`
   width: fit-content;
-  height: 2em;
+  height: 3rem;
   overflow: hidden;
 
   display: flex;
@@ -13,10 +13,10 @@ export const SplitWrapper = styled.div`
 
 export const SplitChildren = styled.span`
   ${({ theme }) => css`
+    padding: 0.5rem 0;
     color: ${theme.colors.gray[200]};
-    font-size: 2em;
+    font-size: ${theme.font.sizes.xlarge};
     line-height: 1;
-    cursor: pointer;
 
     display: flex;
     align-items: center;
