@@ -7,8 +7,8 @@ export const SplitWrapper = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: flex-start;
+  justify-content: flex-start;
 `;
 
 export const SplitChildren = styled.span`
@@ -17,9 +17,5 @@ export const SplitChildren = styled.span`
     color: ${theme.colors.gray[200]};
     font-size: ${theme.font.sizes.xlarge};
     line-height: 1;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
   `}
 `;

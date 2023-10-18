@@ -6,10 +6,16 @@ import { Flex } from '@/components';
 import * as S from './styles';
 import { DefaultTheme } from '@/styles';
 
-interface IBoxProps {
-  firstChild: ReactNode;
-  lastChild: ReactNode;
+export type BorderType = {
+  borderLeftAndRight?: 'left' | 'right' | 'left/right';
+  borderTopAndBottom?: 'top' | 'bottom' | 'top/bottom';
+};
+
+interface IBoxProps extends BorderType {
+  firstChild?: ReactNode;
+  lastChild?: ReactNode;
   icon?: ReactNode;
+  area?: string;
   alignWrapper?: 'center' | 'flex-end';
   justifyChildren?: 'center' | 'space-between';
   padding?: '3.2rem' | '3.2rem 6rem';
@@ -19,9 +25,13 @@ const Box = ({
   firstChild,
   lastChild,
   icon,
+  area,
   alignWrapper = 'flex-end',
   justifyChildren = 'space-between',
-  padding = '3.2rem 6rem'
+  padding = '3.2rem',
+  borderLeftAndRight = 'left/right',
+  borderTopAndBottom = 'top/bottom',
+  ...props
 }: IBoxProps) => {
   const splitElementRef = useRef<HTMLDivElement>(null);
   const gridBoxRef = useRef<HTMLDivElement>(null);
@@ -75,14 +85,18 @@ const Box = ({
   }, []);
 
   return (
-    <S.BoxWrapper
+    <S.BoxContent
       align={alignWrapper}
+      borderLeftAndRight={borderLeftAndRight}
+      borderTopAndBottom={borderTopAndBottom}
       ref={gridBoxRef}
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
       style={{
-        padding
+        padding,
+        gridArea: `${area ? area : ''}`
       }}
+      {...props}
     >
       <Flex
         align="flex-end"
@@ -91,13 +105,13 @@ const Box = ({
           width: '100%'
         }}
       >
-        <S.BoxSplitWrapper ref={splitElementRef}>
+        <S.BoxSplitContent ref={splitElementRef}>
           <S.BoxSplitChildren>{firstChild}</S.BoxSplitChildren>
           <S.BoxSplitChildren>{lastChild}</S.BoxSplitChildren>
-        </S.BoxSplitWrapper>
+        </S.BoxSplitContent>
         {!!icon && icon}
       </Flex>
-    </S.BoxWrapper>
+    </S.BoxContent>
   );
 };
 

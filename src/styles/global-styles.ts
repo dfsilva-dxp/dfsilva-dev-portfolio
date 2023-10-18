@@ -35,8 +35,9 @@ const GlobalStyles = createGlobalStyle`
   h3,
   h4,
   h5,
-  h6 {
-    font-weight: 300;
+  h6,
+  strong {
+    font-weight: ${theme.font.weight.regular};
     color: ${theme.colors.text.heading};
   }
   ol,
