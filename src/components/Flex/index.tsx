@@ -1,6 +1,9 @@
-import { HTMLProps, ReactNode } from 'react';
-import { StyleSheetManager } from 'styled-components';
-import isValidProp from '@emotion/is-prop-valid';
+import {
+  ForwardRefRenderFunction,
+  HTMLAttributes,
+  ReactNode,
+  forwardRef
+} from 'react';
 
 import * as S from './styles';
 
@@ -41,40 +44,42 @@ export type FlexType = {
     | '6rem';
 };
 
-type FlexDivType = HTMLProps<HTMLDivElement>;
+type FlexDivType = HTMLAttributes<HTMLDivElement>;
 
 type IFlexProps = {
   children: ReactNode;
 } & FlexType &
   FlexDivType;
 
-const Flex = ({
-  children,
-  display = 'flex',
-  direction = 'row',
-  align = 'flex-start',
-  justify = 'flex-start',
-  content = 'stretch',
-  wrap = 'wrap',
-  gap = '0',
-  ...props
-}: IFlexProps) => {
+const Flex: ForwardRefRenderFunction<HTMLDivElement, IFlexProps> = (
+  {
+    children,
+    display = 'flex',
+    direction = 'row',
+    align = 'flex-start',
+    justify = 'flex-start',
+    content = 'stretch',
+    wrap = 'wrap',
+    gap = '0',
+    ...props
+  },
+  ref
+) => {
   return (
-    <StyleSheetManager shouldForwardProp={(propName) => isValidProp(propName)}>
-      <S.FlexContent
-        display={display}
-        direction={direction}
-        align={align}
-        justify={justify}
-        content={content}
-        wrap={wrap}
-        gap={gap}
-        {...props}
-      >
-        {children}
-      </S.FlexContent>
-    </StyleSheetManager>
+    <S.FlexContent
+      ref={ref}
+      display={display}
+      direction={direction}
+      align={align}
+      justify={justify}
+      content={content}
+      wrap={wrap}
+      gap={gap}
+      {...props}
+    >
+      {children}
+    </S.FlexContent>
   );
 };
 
-export default Flex;
+export const FlexComponent = forwardRef(Flex);
