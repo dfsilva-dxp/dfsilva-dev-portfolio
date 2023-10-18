@@ -91,10 +91,10 @@ const Box = ({
           width: '100%'
         }}
       >
-        <S.SplitWrapper ref={splitElementRef}>
-          <S.SplitChildren>{firstChild}</S.SplitChildren>
-          <S.SplitChildren>{lastChild}</S.SplitChildren>
-        </S.SplitWrapper>
+        <S.BoxSplitWrapper ref={splitElementRef}>
+          <S.BoxSplitChildren>{firstChild}</S.BoxSplitChildren>
+          <S.BoxSplitChildren>{lastChild}</S.BoxSplitChildren>
+        </S.BoxSplitWrapper>
         {!!icon && icon}
       </Flex>
     </S.BoxWrapper>

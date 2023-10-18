@@ -2,6 +2,8 @@ import styled, { css } from 'styled-components';
 
 import { FlexComponent } from '@/components/Flex';
 
+import { SplitChildren, SplitWrapper } from '@/components/Split/styles';
+
 export const BoxWrapper = styled(FlexComponent)`
   ${({ theme }) => css`
     width: 100%;
@@ -12,29 +14,11 @@ export const BoxWrapper = styled(FlexComponent)`
   `}
 `;
 
-export const SplitWrapper = styled.div`
-  width: fit-content;
-  height: 3rem;
-  overflow: hidden;
+export const BoxSplitWrapper = styled(SplitWrapper)``;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-`;
-
-export const SplitChildren = styled.span`
+export const BoxSplitChildren = styled(SplitChildren)`
   ${({ theme }) => css`
-    padding: 0.5rem 0;
-    color: ${theme.colors.gray[200]};
-    font-size: ${theme.font.sizes.xlarge};
-    line-height: 1;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:nth-child(2) {
+    &:last-child {
       color: ${theme.colors.white};
     }
   `}
