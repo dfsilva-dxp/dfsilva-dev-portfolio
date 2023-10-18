@@ -48,6 +48,7 @@ const defaultTheme = {
     },
     gray: {
       50: '#F5F5F5',
+      100: '#F2F2F2',
       200: '#C7CFD9',
       700: '#383838'
     },
@@ -57,7 +58,7 @@ const defaultTheme = {
     gradient: {
       base: 'rgb(207,235,255)',
       linear:
-        'linear-gradient(90deg, rgba(207,235,255,1) 5%, rgba(255,153,189,1) 30%, rgba(151,71,255,1) 100%);'
+        'linear-gradient(90deg, rgba(151,71,255,1) 5%, rgba(255,153,189,1) 30%, rgba(207,235,255,1) 100%);'
     }
   },
   layers: {
