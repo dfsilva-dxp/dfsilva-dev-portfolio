@@ -1,4 +1,4 @@
-import React, { ReactNode, useLayoutEffect, useRef } from 'react';
+import { ReactNode, useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 
 import { Flex } from '@/components';
@@ -7,31 +7,30 @@ import * as S from './styles';
 import { DefaultTheme } from '@/styles';
 
 export type BorderType = {
-  borderLeftAndRight?: 'left' | 'right' | 'left/right';
-  borderTopAndBottom?: 'top' | 'bottom' | 'top/bottom';
+  borderBt?: 'top' | 'bottom' | 'tpb' | 'none';
+  borderLr?: 'left' | 'right' | 'lfr' | 'none';
+  padding?: string;
 };
 
 interface IBoxProps extends BorderType {
-  firstChild?: ReactNode;
-  lastChild?: ReactNode;
+  children: ReactNode;
+  splitChildren: ReactNode;
   icon?: ReactNode;
+  contentAlign?: 'center' | 'flex-end';
+  justifySplit?: 'center' | 'space-between';
   area?: string;
-  alignWrapper?: 'center' | 'flex-end';
-  justifyChildren?: 'center' | 'space-between';
-  padding?: '3.2rem' | '3.2rem 6rem';
 }
 
 const Box = ({
-  firstChild,
-  lastChild,
+  children,
+  splitChildren,
   icon,
+  contentAlign = 'flex-end',
+  justifySplit = 'space-between',
   area,
-  alignWrapper = 'flex-end',
-  justifyChildren = 'space-between',
   padding = '3.2rem',
-  borderLeftAndRight = 'left/right',
-  borderTopAndBottom = 'top/bottom',
-  ...props
+  borderBt = 'tpb',
+  borderLr = 'lfr'
 }: IBoxProps) => {
   const splitElementRef = useRef<HTMLDivElement>(null);
   const gridBoxRef = useRef<HTMLDivElement>(null);
@@ -86,29 +85,29 @@ const Box = ({
 
   return (
     <S.BoxContent
-      align={alignWrapper}
-      borderLeftAndRight={borderLeftAndRight}
-      borderTopAndBottom={borderTopAndBottom}
+      align={contentAlign}
+      borderBt={borderBt}
+      borderLr={borderLr}
+      padding={padding}
       ref={gridBoxRef}
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
       style={{
-        padding,
         gridArea: `${area ? area : ''}`
       }}
-      {...props}
     >
       <Flex
-        align="flex-end"
-        justify={justifyChildren}
+        align="center"
+        justify={justifySplit}
         style={{
           width: '100%'
         }}
       >
-        <S.BoxSplitContent ref={splitElementRef}>
-          <S.BoxSplitChildren>{firstChild}</S.BoxSplitChildren>
-          <S.BoxSplitChildren>{lastChild}</S.BoxSplitChildren>
-        </S.BoxSplitContent>
+        <S.BoxSplitWrapper ref={splitElementRef}>
+          <S.BoxSplitChildren>{children}</S.BoxSplitChildren>
+          <S.BoxSplitChildren>{splitChildren}</S.BoxSplitChildren>
+        </S.BoxSplitWrapper>
+
         {!!icon && icon}
       </Flex>
     </S.BoxContent>

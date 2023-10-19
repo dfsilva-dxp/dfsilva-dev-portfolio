@@ -13,12 +13,12 @@ const defaultTheme = {
   },
   font: {
     family:
-      "Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+      "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
     weight: {
-      regular: 300,
-      medium: 400,
-      semibold: 500,
-      bold: 700
+      thin: 100,
+      light: 300,
+      regular: 400,
+      medium: 500
     },
     sizes: {
       xsmall: '1.2rem',
@@ -32,6 +32,9 @@ const defaultTheme = {
   },
   colors: {
     white: '#FFF',
+    black: {
+      main: '#040506'
+    },
     text: {
       heading: '#1C1B20',
       main: '#606060'
