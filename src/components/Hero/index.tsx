@@ -13,42 +13,42 @@ import * as S from './styles';
 const Hero = () => {
   return (
     <S.HeroContent>
-      <S.GridLeft direction="column" justify="flex-end" gap="4.5rem">
-        <S.HeroMessage>
-          <Flex direction="column">
-            <span>
-              <strong>Desenvolver</strong> se
-            </span>
-            <span>tornou um hobby</span>
-            <span>favorito.</span>
-          </Flex>
-        </S.HeroMessage>
-
-        <Flex align="center" justify="center" gap="1rem">
-          <Image
-            src="images/svg/logo.svg"
-            alt="Logo Daniel Silva"
-            width={36}
-            height={36}
-            priority
-          />
-
-          <S.HeroInfo>
-            <Flex direction="column" justify="center">
-              <span>Daniel Silva</span>
-              <span>Sênior Frontend Developer</span>
+      <S.FirstColumn align="flex-end">
+        <Flex direction="column" gap="4.5rem">
+          <S.HeroMessage>
+            <Flex direction="column">
+              <span>
+                <strong>Desenvolver</strong> se
+              </span>
+              <span>tornou um hobby</span>
+              <span>favorito.</span>
             </Flex>
-          </S.HeroInfo>
-        </Flex>
-      </S.GridLeft>
+          </S.HeroMessage>
 
-      <S.GridRight>
+          <Flex align="center" gap="1rem">
+            <Image
+              src="images/svg/logo.svg"
+              alt="Logo Daniel Silva"
+              width={36}
+              height={36}
+              priority
+            />
+
+            <S.HeroName>
+              <Flex direction="column">
+                <span>Daniel Silva</span>
+                <span>Sênior Frontend Developer</span>
+              </Flex>
+            </S.HeroName>
+          </Flex>
+        </Flex>
+      </S.FirstColumn>
+      <S.LastColumn>
         <Box
-          firstChild="React"
-          lastChild="React"
+          splitChildren="React"
           area="react"
-          borderLeftAndRight="left"
-          borderTopAndBottom="bottom"
+          borderBt="top"
+          borderLr="left"
           icon={
             <Image
               src="images/svg/icons/react_icon.svg"
@@ -58,13 +58,15 @@ const Hero = () => {
               priority
             />
           }
-        />
+        >
+          React
+        </Box>
+
         <Box
-          firstChild="Next"
-          lastChild="Next"
+          splitChildren="Next"
           area="next"
-          borderLeftAndRight="left/right"
-          borderTopAndBottom="bottom"
+          borderBt="top"
+          borderLr="left"
           icon={
             <Image
               src="images/svg/icons/next_icon.svg"
@@ -74,13 +76,15 @@ const Hero = () => {
               priority
             />
           }
-        />
+        >
+          Next
+        </Box>
+
         <Box
-          firstChild="Node"
-          lastChild="Node"
-          borderLeftAndRight="left/right"
-          borderTopAndBottom="bottom"
+          splitChildren="Node"
           area="node"
+          borderBt="top"
+          borderLr="left"
           icon={
             <Image
               src="images/svg/icons/node_icon.svg"
@@ -90,47 +94,53 @@ const Hero = () => {
               priority
             />
           }
-        />
+        >
+          Node
+        </Box>
 
-        <S.HeroSocialIcons>
+        <S.HeroSocialWrapper>
           <Box
-            firstChild={<InstagramLogo size={24} />}
-            lastChild={<InstagramLogo size={24} />}
-            alignWrapper="center"
-            justifyChildren="center"
-            borderLeftAndRight="left"
-            borderTopAndBottom="bottom"
+            splitChildren={<InstagramLogo size={24} />}
+            contentAlign="center"
+            justifySplit="center"
             area="in"
-          />
+            borderBt="top"
+            borderLr="left"
+          >
+            <InstagramLogo size={24} />
+          </Box>
           <Box
-            firstChild={<LinkedinLogo size={24} />}
-            lastChild={<LinkedinLogo size={24} />}
-            alignWrapper="center"
-            justifyChildren="center"
-            borderLeftAndRight="left"
-            borderTopAndBottom="bottom"
+            splitChildren={<LinkedinLogo size={24} />}
+            contentAlign="center"
+            justifySplit="center"
             area="lk"
-          />
+            borderBt="top"
+            borderLr="left"
+          >
+            <LinkedinLogo size={24} />
+          </Box>
           <Box
-            firstChild={<GithubLogo size={24} />}
-            lastChild={<GithubLogo size={24} />}
-            alignWrapper="center"
-            justifyChildren="center"
-            borderLeftAndRight="left"
-            borderTopAndBottom="bottom"
+            splitChildren={<GithubLogo size={24} />}
+            contentAlign="center"
+            justifySplit="center"
             area="gh"
-          />
+            borderBt="top"
+            borderLr="left"
+          >
+            <GithubLogo size={24} />
+          </Box>
           <Box
-            firstChild={<TwitterLogo size={24} />}
-            lastChild={<TwitterLogo size={24} />}
-            alignWrapper="center"
-            justifyChildren="center"
-            borderLeftAndRight="left"
-            borderTopAndBottom="bottom"
+            splitChildren={<TwitterLogo size={24} />}
+            contentAlign="center"
+            justifySplit="center"
             area="tw"
-          />
-        </S.HeroSocialIcons>
-      </S.GridRight>
+            borderBt="top"
+            borderLr="left"
+          >
+            <TwitterLogo size={24} />
+          </Box>
+        </S.HeroSocialWrapper>
+      </S.LastColumn>
     </S.HeroContent>
   );
 };

@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import Head from 'next/head';
-import { Roboto } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 
 import { Providers } from './providers';
 
 import StyledComponentsRegistry from '@/lib/registry';
 
-const roboto = Roboto({
-  weight: ['300', '400', '500', '700'],
+const poppins = Poppins({
+  weight: ['100', '300', '400', '500'],
   subsets: ['latin'],
   display: 'swap'
 });
@@ -59,7 +59,7 @@ export default function RootLayout({
 
         <link rel="manifest" href="/manifest.json" />
       </Head>
-      <body className={roboto.className}>
+      <body className={poppins.className}>
         <StyledComponentsRegistry>
           <Providers>{children}</Providers>
         </StyledComponentsRegistry>

@@ -6,11 +6,11 @@ import * as S from './styles';
 type SplitDivType = HTMLAttributes<HTMLDivElement>;
 
 interface ISplitProps extends SplitDivType {
-  firstChild: ReactNode;
-  lastChild: ReactNode;
+  children: ReactNode;
+  splitChildren: ReactNode;
 }
 
-const Split = ({ firstChild, lastChild, ...props }: ISplitProps) => {
+const Split = ({ children, splitChildren, ...props }: ISplitProps) => {
   const splitElementRef = useRef<HTMLDivElement>(null);
   const ctx = useRef<gsap.Context | null>();
 
@@ -64,8 +64,8 @@ const Split = ({ firstChild, lastChild, ...props }: ISplitProps) => {
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
     >
-      <S.SplitChildren>{firstChild}</S.SplitChildren>
-      <S.SplitChildren>{lastChild}</S.SplitChildren>
+      <S.SplitChildren>{children}</S.SplitChildren>
+      <S.SplitChildren>{splitChildren}</S.SplitChildren>
     </S.SplitWrapper>
   );
 };
