@@ -35,7 +35,7 @@ const Hero = () => {
             />
 
             <S.HeroName>
-              <Flex direction="column">
+              <Flex direction="column" align="flex-start" justify="flex-start">
                 <span>Daniel Silva</span>
                 <span>Sênior Frontend Developer</span>
               </Flex>
