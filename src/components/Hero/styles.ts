@@ -54,6 +54,11 @@ export const HeroName = styled.h1`
     line-height: 1;
     font-weight: 500;
     text-transform: uppercase;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
   `}
 `;
 
