@@ -49,7 +49,7 @@ const GlobalStyles = createGlobalStyle`
   textarea,
   select,
   button {
-    font: ${theme.font.weight.regular} ${theme.font.sizes.large} ${theme.font.family}, sans-serif;
+    font: ${theme.font.weight.light} ${theme.font.sizes.large} ${theme.font.family}, sans-serif;
   }
   span {
     display: inline-block;
